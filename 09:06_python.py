@@ -1,5 +1,4 @@
-print("数字を入力してください")
-a = int(input())
+a = int(input("数字を入力してください"))
 if a >= 80:
     print("合格")
 else:
