@@ -18,7 +18,6 @@ print(a[1])
 
 a[1] = b
 print(a)
-'''
 
 a = {"x":45,"y":300,"w":20}
 b = 5
@@ -34,3 +33,36 @@ for i in a:
     print(a[i])
 
 print("END")
+
+
+
+i = 0
+for num in range(11):
+    print(num)
+    i += num
+print("合計", i)
+
+
+
+a = int(input("数値を入力してください"))
+i = 0
+num = 0
+a += 1
+for num in range(a):
+    print(num)
+    i += num
+print("1から", a - 1, "までの合計は",i, "です")
+
+'''
+
+a = int(input("数値を入力してください"))
+num = 1
+a += 1
+i = 0
+print("Start")
+while num < a:
+    i += num
+    print("足し算", num)
+    num += 1
+
+print("合計", i)
