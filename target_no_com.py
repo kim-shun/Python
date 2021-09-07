@@ -27,6 +27,7 @@ def draw_objects():
     # ボールを描画
     cv.create_oval(ball["x"] - ball["w"], ball["y"] - ball["w"],
         ball["x"] + ball["w"], ball["y"] + ball["w"], fill="yellow")
+    
 
 # ボールの移動
 def move_ball():
