@@ -8,6 +8,7 @@ result = culculate_average(2,3,4,5,6,7,8)
 print("平均は",result,"です")
 '''
 
+
 def culculate_average(nums, quantity):
     nums_sum = sum(nums)
     average = nums_sum / quantity
@@ -24,6 +25,16 @@ for i in range(quantity):
 
 result = culculate_average(nums, quantity)
 print("平均は",result,"です")
+
+
+'''
+n = [9,8,4,67,32,62, 5]
+
+n[0] = n[1]
+print(n)
+'''
+
+
 
 
     
