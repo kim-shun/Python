@@ -54,3 +54,5 @@ parrot('A', action='3個目')
 ST表示--> a stiff !
 A a stiff 3個目 ノルウェージャンブルー
 '''
+
+
