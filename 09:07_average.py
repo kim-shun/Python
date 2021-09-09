@@ -7,7 +7,14 @@ def culculate_average(a,b,c,d,e,f,g):
 result = culculate_average(2,3,4,5,6,7,8)
 print("平均は",result,"です")
 '''
+'''
+def culculate(num1, num2):
+    print(num1 ** num2)
 
+n1 = int(input("数字を入力："))
+n2 = int(input("数字を入力："))
+culculate(n1,n2)
+'''
 
 def culculate_average(nums, quantity):
     nums_sum = sum(nums)
@@ -27,12 +34,7 @@ result = culculate_average(nums, quantity)
 print("平均は",result,"です")
 
 
-'''
-n = [9,8,4,67,32,62, 5]
 
-n[0] = n[1]
-print(n)
-'''
 
 
 
