@@ -23,3 +23,17 @@ num = int(input("数字を入力してください："))
 print("2進数は" + base_number(num) + "です")
 '''
 
+def base_number(num):
+    if num == 0:
+        return '0'
+
+    binary = ''
+    while num:
+        binary += str(num % 2)
+        num //= 2
+    return binary[::-1]
+
+print(base_number(2))
+print(base_number(1))
+print(base_number(0))
+print(base_number(160))
