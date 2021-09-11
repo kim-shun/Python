@@ -1,9 +1,8 @@
-def sort(n):
-    right = len(n) - 1
-    center = len(n) // 2
+T = [3,8,6,1,2,5,5,10,9,7]
 
-    n[right] 
-    
+for i in range(len(T) - 1):
+    for j in range(i + 1, len(T)):
+        if T[i] > T[j]:
+            T[i], T[j] = T[j], T[i]
 
-n = [1,5,9,75,2,33,6,13, 4]
-sort(n)
+print(T)
