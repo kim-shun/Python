@@ -24,18 +24,18 @@ print(str(divisor_range) + "以下の約数の和は" + str(sum(limited_divisor)
 
 
 
-def culculate_divisor(num):
+def calculate_divisor(num):
     divisor = [i for i in range(1,num + 1) if num % i == 0]
     return divisor
 
-def culculate_limited_divisor(num,divisor_range):
+def calculate_limited_divisor(num,divisor_range):
     limited_divisor = [i for i in range(1,divisor_range + 1) if num % i == 0]
     return limited_divisor
 
 num = int(input("約数の総和を出したい整数を入力してください："))
 divisor_range = int(input("和を出したい約数の範囲を指定してください："))
-result = culculate_divisor(num)
-result2 = culculate_limited_divisor(num,divisor_range)
+result = calculate_divisor(num)
+result2 = calculate_limited_divisor(num,divisor_range)
 
 print("約数の数は" + str(len(result)) + "です")
 print("約数の総和は" + str(sum(result)) + "です")
