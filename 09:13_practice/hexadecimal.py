@@ -11,4 +11,4 @@ def cal_hexa(num):
 print(cal_hexa(160)) #A0
 print(cal_hexa(100)) #64
 print(cal_hexa(50)) #32
-print(cal_hexa(7770))
+print(cal_hexa(7770)) #1E5A
