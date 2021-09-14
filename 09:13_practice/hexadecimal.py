@@ -9,7 +9,6 @@ def cal_hexa(num):
     while num:
         remainder = num % 16
         hexa = nums[remainder] + hexa
-        print(hexa)
         num //= 16
     return hexa
 
