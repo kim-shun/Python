@@ -47,10 +47,14 @@ power = [row[2] for row in matrix]
 print(power) #[5, 25, 125]
 
 matrix = [[1, 3, 5], [4, 9, 25], [8, 27, 125]]
+'''
 power = [[row[i] for row in matrix] for i in range(3)]
 print(power) #[[1, 4, 8], [3, 9, 27], [5, 25, 125]]
-
-
+'''
+power = list(zip(matrix))
+print(power) #[([1, 3, 5],), ([4, 9, 25],), ([8, 27, 125],)]
+power = list(zip(*matrix))
+print(power) #[(1, 4, 8), (3, 9, 27), (5, 25, 125)]
 
 fruits = ['apple', 'kiwi', 'plum']
 fruits.pop() #末尾を抜き取る
@@ -58,3 +62,13 @@ print(fruits) #['apple', 'kiwi']
 aaa = [1,2,3,4,5,6,7,8]
 aaa.pop() #末尾を抜き取る
 print(aaa) #[1, 2, 3, 4, 5, 6, 7]
+
+'''
+Zena = 'BeautifulIsBetterThanUgly'
+Zena[3] = "b"
+print(Zena) #TypeError: 'str' object does not support item assignment
+'''
+
+matrix2 = [[2, 3, 5], [4, 9, 25], [8, 27, 125]]
+power2 = [row[2] for row in matrix2]
+print(power2)
