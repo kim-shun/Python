@@ -2,11 +2,20 @@
 
 class User:
     count = 0 #クラス変数
-    def __init__(self,name,age):
+    def __init__(self,name,age): #コンストラクタ
         User.count += 1
         self.name = name #インスタンス変数
         self.age = age
-    #pass
+
+    def say_hi(self):
+        print("hi", self.name)
+
+
+tom = User('tom',16)
+bob = User('bob',18)
+tom.say_hi() #hi tom
+
+'''
 print(User.count) #0
 tom = User('Tom',15)
 print(tom) #<__main__.User object at 0x7fd0e8efebb0>
@@ -14,7 +23,7 @@ print(tom.name) #Tom
 bob = User('Bob',16)
 print(bob.age) #16
 print(User.count) #2
-'''
+
 tom = User() #インスタンス
 tom.name = 'Tom'
 tom.age = 18
