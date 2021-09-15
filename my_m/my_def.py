@@ -4,6 +4,9 @@ def f2bai(n):
     return n * 2
 
 def f3bai(n):
+    '''
+    関数の使い方
+    '''
     return n * 3
 
 def f4kaku(x,y):
