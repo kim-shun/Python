@@ -1,89 +1,96 @@
 from tkinter import *
 
-def color_change(num):
-    color = num
-    cv.create_oval(ball["x"] - ball["w"], ball["y"] - ball["w"],
-    ball["x"] + ball["w"], ball["y"] + ball["w"], fill=color)
-
 def btn_click0():
-    txt1.insert(count,0)
+    txt.insert(count,0)
 
 def btn_click1():
-    txt1.insert(count,1)
+    txt.insert(count,1)
 
 def btn_click2():
-    txt1.insert(count,2)
+    txt.insert(count,2)
 
 def btn_click3():
-    txt1.insert(count,3)
+    txt.insert(count,3)
 
 def btn_click4():
-    txt1.insert(count,4)
+    txt.insert(count,4)
 
 def btn_click5():
-    txt1.insert(count,5)
+    txt.insert(count,5)
 
 def btn_click6():
-    txt1.insert(count,6)
+    txt.insert(count,6)
 
 def btn_click7():
-    txt1.insert(count,7)
+    txt.insert(count,7)
 
 def btn_click8():
-    txt1.insert(count,8)
+    txt.insert(count,8)
 
 def btn_click9():
-    txt1.insert(count,9)
+    txt.insert(count,9)
 
+def btn_click_a():
+    txt.insert(count,'A')
 
+def btn_click_b():
+    txt.insert(count,'B')
 
-def btn_click():
-    num = txt1.get()
-    color_change('#' + num)
-    
+def btn_click_c():
+    txt.insert(count,'C')
+    limited_str()
 
-ball = {"dirx": 15, "diry": -15, "x": 450, "y": 200, "w": 80}
-nums = '0123456789ABCDEF'
-count = 0
-i = 30
-for j in range(10):
-    if j == 0:
-        button = Button(text=nums[j],command=btn_click0)
-    elif j == 1:
-        button = Button(text=nums[j],command=btn_click1)
-    elif j == 2:
-        button = Button(text=nums[j],command=btn_click2)
-    elif j == 3:
-        button = Button(text=nums[j],command=btn_click3)
-    elif j == 4:
-        button = Button(text=nums[j],command=btn_click4)
-    elif j == 5:
-        button = Button(text=nums[j],command=btn_click5)
-    elif j == 6:
-        button = Button(text=nums[j],command=btn_click6)
-    elif j == 7:
-        button = Button(text=nums[j],command=btn_click7)
-    elif j == 8:
-        button = Button(text=nums[j],command=btn_click8)
-    elif j == 9:
-        button = Button(text=nums[j],command=btn_click9)
-    cv.create_window(i, 50, win=button)
-    count += 1
-    i += 60
+def btn_click_d():
+    txt.insert(count,'D')
+
+def btn_click_e():
+    txt.insert(count,'E')
+
+def btn_click_f():
+    txt.insert(count,'F')
 
 win = Tk()
-win.title("ボールの色を変える")
 cv = Canvas(win, width = 600, height = 400)
+win.title('ボールの色を変える')
 cv.pack()
 
-color = "white"
+txt = Entry(width=20)
+txt.place(x=90, y=100)
+txt2 = Entry(width=20)
+txt2.place(x=90, y=140)
 
-cv.create_oval(ball["x"] - ball["w"], ball["y"] - ball["w"],
-    ball["x"] + ball["w"], ball["y"] + ball["w"], fill=color)
-
-txt1 = Entry(width=10)
-txt1.place(x=150, y=160)
-
-
-btn = Button(text='カラーチェンジ', command=btn_click)
-btn.place(x=150, y=220)
+count = 0
+for i in range(16):
+    btn_0 = Button(text='0',command=btn_click0)
+    cv.create_window(30, 50, win=btn_0)
+    btn_1 = Button(text='1',command=btn_click1)
+    cv.create_window(60, 50, win=btn_1)
+    btn_2 = Button(text='2',command=btn_click2)
+    cv.create_window(90, 50, win=btn_2)
+    btn_3 = Button(text='3',command=btn_click3)
+    cv.create_window(120, 50, win=btn_3)
+    btn_4 = Button(text='4',command=btn_click4)
+    cv.create_window(150, 50, win=btn_4)
+    btn_5 = Button(text='5',command=btn_click5)
+    cv.create_window(180, 50, win=btn_5)
+    btn_6 = Button(text='6',command=btn_click6)
+    cv.create_window(210, 50, win=btn_6)
+    btn_7 = Button(text='7',command=btn_click7)
+    cv.create_window(240, 50, win=btn_7)
+    btn_8 = Button(text='8',command=btn_click8)
+    cv.create_window(270, 50, win=btn_8)
+    btn_9 = Button(text='9',command=btn_click9)
+    cv.create_window(300, 50, win=btn_9)
+    btn_a= Button(text='A',command=btn_click_a)
+    cv.create_window(330, 50, win=btn_a)
+    btn_b = Button(text='B',command=btn_click_b)
+    cv.create_window(360, 50, win=btn_b)
+    btn_c = Button(text='C',command=btn_click_c)
+    cv.create_window(390, 50, win=btn_c)
+    btn_d = Button(text='D',command=btn_click_d)
+    cv.create_window(420, 50, win=btn_d)
+    btn_e = Button(text='E',command=btn_click_e)
+    cv.create_window(450, 50, win=btn_e)
+    btn_f = Button(text='F',command=btn_click_f)
+    cv.create_window(480, 50, win=btn_f)
+    count += 1

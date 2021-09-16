@@ -40,9 +40,11 @@ print(count2()) #3
 
 def f_out():
     n = 0
+    print('OUT')
     def count3():
         nonlocal n
         n += 1
+        print('IN')
         return n
     return count3
 counter = f_out()
@@ -51,6 +53,12 @@ print(counter()) #1
 print(counter()) #2
 print(counter()) #3
 
-
-
-
+'''
+OUT
+IN
+1
+IN
+2
+IN
+3
+'''
