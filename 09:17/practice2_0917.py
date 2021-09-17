@@ -1,4 +1,4 @@
-'''
+
 def scope():
     loc = "init"
     
@@ -14,16 +14,17 @@ def scope():
         loc = "global"
 
     do_local()
-    print(loc)
+    print(loc) #A
     do_nonlocal()
-    print(loc)
+    print(loc) #B
     do_global()
-    print(loc)
+    print(loc) #C
 
 scope()
-print(loc)
+print(loc) #D
 
-
+print()
+'''
 
 #Need Speed?
 #I'm Saya.
@@ -62,7 +63,7 @@ class kusanagi(Exception):
 def raise_character(a):
     print("【A】")
     raise kusanagi
-print("【B】")
+    print("【B】")
 
 def func(name: int):
     try:
@@ -78,3 +79,7 @@ try:
 except Exception:
     print("【E】")
 
+#Magatama is a
+#Saya's
+#reliable
+#partner
