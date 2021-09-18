@@ -1,7 +1,67 @@
 from tkinter import *
 
-def btn_click():
+def btn_click0():
     txt.insert(7,0)
+    click_count()
+
+def btn_click1():
+    txt.insert(7,1)
+    click_count()
+
+def btn_click2():
+    txt.insert(7,2)
+    click_count()
+
+def btn_click3():
+    txt.insert(7,3)
+    click_count()
+
+def btn_click4():
+    txt.insert(7,4)
+    click_count()
+
+def btn_click5():
+    txt.insert(7,5)
+    click_count()
+
+def btn_click6():
+    txt.insert(7,6)
+    click_count()
+
+def btn_click7():
+    txt.insert(7,7)
+    click_count()
+
+def btn_click8():
+    txt.insert(7,8)
+    click_count()
+
+def btn_click9():
+    txt.insert(7,9)
+    click_count()
+
+def btn_click_a():
+    txt.insert(7,'A')
+    click_count()
+
+def btn_click_b():
+    txt.insert(7,'B')
+    click_count()
+
+def btn_click_c():
+    txt.insert(5,'C')
+    click_count()
+
+def btn_click_d():
+    txt.insert(7,'D')
+    click_count()
+
+def btn_click_e():
+    txt.insert(7,'E')
+    click_count()
+
+def btn_click_f():
+    txt.insert(7,'F')
     click_count()
 
 
@@ -22,7 +82,7 @@ def color_change():
     hexa = txt.get()
     color = '#' + hexa
     cv.create_oval(550-20, 325-20, 300+20, 75+20, fill=color, outline="black")
-
+    
 def clear():
     txt.delete(0, END)
     txt2.delete(0, END)
@@ -51,10 +111,14 @@ txt2.place(x=140, y=100)
 txt2.insert(0,'6')
 
 nums = '0123456789ABCDEF'
-
+btn_clicks = [btn_click0,btn_click1,btn_click2,btn_click3,btn_click4,
+              btn_click5,btn_click6,btn_click7,btn_click8,btn_click9,
+              btn_click_a,btn_click_b,btn_click_c,btn_click_d,
+              btn_click_e,btn_click_f]
+    
 x = 30
 for i in range(16):
-    btn = Button(text=nums[i],command=btn_click)
+    btn = Button(text=nums[i],command=btn_clicks[i])
     cv.create_window(x, 50, win=btn)
     x += 30
 
