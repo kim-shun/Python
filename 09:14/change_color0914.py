@@ -68,7 +68,7 @@ n = 5
 
 def click_count():
     global n
-    txt2.insert(0,str(n))
+    txt2.insert(0,n)
     if n == 3 or n == 0:
         color_btn["state"] = "normal"
     else:
