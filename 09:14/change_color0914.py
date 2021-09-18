@@ -1,60 +1,87 @@
 from tkinter import *
 
 def btn_click0():
-    txt.insert(count,0)
+    txt.insert(5,0)
+    click_count()
 
 def btn_click1():
-    txt.insert(count,1)
+    txt.insert(5,1)
+    click_count()
 
 def btn_click2():
-    txt.insert(count,2)
+    txt.insert(5,2)
+    click_count()
 
 def btn_click3():
-    txt.insert(count,3)
+    txt.insert(5,3)
+    click_count()
 
 def btn_click4():
-    txt.insert(count,4)
+    txt.insert(5,4)
+    click_count()
 
 def btn_click5():
-    txt.insert(count,5)
+    txt.insert(5,5)
+    click_count()
 
 def btn_click6():
-    txt.insert(count,6)
+    txt.insert(5,6)
+    click_count()
 
 def btn_click7():
-    txt.insert(count,7)
+    txt.insert(5,7)
+    click_count()
 
 def btn_click8():
-    txt.insert(count,8)
+    txt.insert(5,8)
+    click_count()
 
 def btn_click9():
-    txt.insert(count,9)
+    txt.insert(5,9)
+    click_count()
 
 def btn_click_a():
-    txt.insert(count,'A')
+    txt.insert(5,'A')
+    click_count()
 
 def btn_click_b():
-    txt.insert(count,'B')
+    txt.insert(5,'B')
+    click_count()
 
 def btn_click_c():
-    txt.insert(count,'C')
+    txt.insert(5,'C')
+    click_count()
 
 def btn_click_d():
-    txt.insert(count,'D')
+    txt.insert(5,'D')
+    click_count()
 
 def btn_click_e():
-    txt.insert(count,'E')
+    txt.insert(5,'E')
+    click_count()
 
 def btn_click_f():
-    txt.insert(count,'F')
+    txt.insert(5,'F')
+    click_count()
+
+n = 5
+
+def click_count():
+    global n
+    txt2.insert(0,str(n))
+    n -= 1
+    txt2.delete(1, END)
 
 def color_change():
     hexa = txt.get()
     color = '#' + hexa
-    cv.create_oval(550-20, 325-20, 300+20, 75+20, fill=color, outline="black")
+    cv.create_oval(550-20, 325-20, 300+20, 75+20, fill=color, outline="black")  
 
 def clear():
     txt.delete(0, END)
+    txt2.delete(0, END)
+    global n
+    n = 5
     
     
 
@@ -63,14 +90,20 @@ cv = Canvas(win, width = 600, height = 400)
 win.title('ボールの色を変える')
 cv.pack()
 
-lbl = Label(text='6回ボタンを押してください')
-lbl.place(x=110, y=100)
+lbl = Label(text='回ボタンを押してください')
+lbl.place(x=160, y=103)
+
+lbl = Label(text='あと')
+lbl.place(x=110, y=103)
 
 txt = Entry(width=6)
 txt.place(x=110, y=140)
+txt2 = Entry(width=1)
+txt2.place(x=140, y=100)
+txt2.insert(0,'6')
 
-count = 0
-for i in range(16):
+
+try:
     btn = Button(text='0',command=btn_click0)
     cv.create_window(30, 50, win=btn)
     btn = Button(text='1',command=btn_click1)
@@ -103,15 +136,17 @@ for i in range(16):
     cv.create_window(450, 50, win=btn)
     btn = Button(text='F',command=btn_click_f)
     cv.create_window(480, 50, win=btn)
-    count += 1
     
 
-color = "white"
-cv.create_oval(550-20, 325-20, 300+20, 75+20, fill=color, outline="black")
+    color = "white"
+    cv.create_oval(550-20, 325-20, 300+20, 75+20, fill=color, outline="black")
 
-color_btn = Button(win, text='カラーチェンジ', command=color_change)
-color_btn.place(x=110, y=200)
 
-clear_btn = Button(win, text='クリア', command=clear)
-clear_btn.place(x=110, y=240)
+    color_btn = Button(win, text='カラーチェンジ', command=color_change)
+    color_btn.place(x=110, y=200)
+
+    clear_btn = Button(win, text='クリア', command=clear)
+    clear_btn.place(x=110, y=240)
+except Exception:
+    pass
 
