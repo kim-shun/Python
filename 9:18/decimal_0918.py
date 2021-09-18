@@ -6,9 +6,8 @@ def change_decimal(hexa):
     n = len(hexa)
     sum = 0
     for i in range(n):
-        num = nums[hexa[i].upper()] * (16**(n - 1))
+        num = nums[hexa[i].upper()] * (16**(n - i - 1))
         sum += num
-        n -= 1
     return sum
 
 
