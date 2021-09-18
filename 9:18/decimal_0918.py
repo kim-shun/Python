@@ -5,10 +5,8 @@ def change_decimal(hexa):
             'C':12,'D':13,'E':14,'F':15}
     sum = 0
     for i in hexa:
-        num = nums[i.upper()]
-        sum = 16 * sum + num
+        sum = 16 * sum + nums[i.upper()]
     return sum
-
 
 try:
     hexa = input("16進数を入力してください(マイナス値が扱えません)：")
