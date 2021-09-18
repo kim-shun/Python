@@ -111,6 +111,7 @@ txt2.place(x=140, y=100)
 txt2.insert(0,'6')
 
 nums = '0123456789ABCDEF'
+
 btn_clicks = [btn_click0,btn_click1,btn_click2,btn_click3,btn_click4,
               btn_click5,btn_click6,btn_click7,btn_click8,btn_click9,
               btn_click_a,btn_click_b,btn_click_c,btn_click_d,
@@ -122,9 +123,7 @@ for i in range(16):
     cv.create_window(x, 50, win=btn)
     x += 30
 
-    
-color = "white"
-cv.create_oval(550-20, 325-20, 300+20, 75+20, fill=color, outline="black")
+cv.create_oval(550-20, 325-20, 300+20, 75+20, fill="white", outline="black")
 
 color_btn = Button(win, text='カラーチェンジ', state='disable',command=color_change)
 color_btn.place(x=110, y=200)
