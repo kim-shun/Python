@@ -17,5 +17,17 @@ except KeyError:
 
 #Python標準機能の場合
 print(int(hexa, 16))
-    
+
+
+#enumerate関数で簡略化
+HEXA = '0123456789ABCDEF'
+p = list(enumerate(HEXA))
+print(p)
+
+a = 12345
+#print(a[::-1]) #エラー
+a2 = '12345'
+print(a2[::-1]) #54321
+print(a2[::-2]) #531
+
 
