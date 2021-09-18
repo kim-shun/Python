@@ -4,8 +4,8 @@ def change_decimal(hexa):
             '7':7,'8':8,'9':9,'A':10,'B':11,
             'C':12,'D':13,'E':14,'F':15}
     sum = 0
-    for i in range(len(hexa)):
-        num = nums[hexa[i].upper()]
+    for i in hexa:
+        num = nums[i.upper()]
         sum = 16 * sum + num
     return sum
 
