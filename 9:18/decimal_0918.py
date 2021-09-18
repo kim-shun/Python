@@ -3,11 +3,10 @@ def change_decimal(hexa):
     nums = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,
             '7':7,'8':8,'9':9,'A':10,'B':11,
             'C':12,'D':13,'E':14,'F':15}
-    n = len(hexa)
     sum = 0
-    for i in range(n):
-        num = nums[hexa[i].upper()] * (16**(n - i - 1))
-        sum += num
+    for i in range(len(hexa)):
+        num = nums[hexa[i].upper()]
+        sum = 16 * sum + num
     return sum
 
 
