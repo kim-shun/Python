@@ -18,5 +18,8 @@ try:
     print(result)
 except KeyError:
     print('0～9の数字、A～Fの英字を半角で入力してください')
+
+#Python標準機能の場合
+print(int(hexa, 16))
     
 
