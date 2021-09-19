@@ -43,19 +43,18 @@ def scope():
         loc = "5"
 
     do_local()
-    print("A:2",loc) #2
+    print("A:2",loc)
     do_nonlocal()
-    print("B:4",loc) #4
+    print("B:4",loc)
     do_global()
-    print("C:4",loc) #4
+    print("C:4",loc)
 
-print("D:1",loc) #1
+print("D:1",loc)
 
 scope()
-print("E:5",loc) #5
+print("E:5",loc)
     
 
-print()
 print()
 
 def scope2():
@@ -73,12 +72,12 @@ def scope2():
         loc2 = "global"
 
     do_local2()
-    print("1:init",loc2) #A
+    print("1:init",loc2)
     do_nonlocal2()
-    print("2:nonlocal",loc2) #B
+    print("2:nonlocal",loc2)
     do_global2()
-    print("3:nonlocal",loc2) #C
+    print("3:nonlocal",loc2)
 
 scope2()
-print("4:global",loc2) #D
+print("4:global",loc2)
 
