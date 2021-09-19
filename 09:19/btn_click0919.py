@@ -1,13 +1,17 @@
 from tkinter import *
 
-count = 0
+count = 1
 
 def click_count():
     global count
     txt.insert(0,count)
-    txt.delete(1,END)
-    if count >= 9:
-        btn["state"] = "disable"
+
+    def disable():
+        nonlocal count
+        txt.delete(1,END)
+        if count >= 9:
+            btn["state"] = "disable"
+    disable()
     count += 1
 
 win = Tk()
