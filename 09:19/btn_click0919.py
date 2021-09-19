@@ -7,7 +7,6 @@ def click_count():
     txt.insert(0,count)
 
     def disable():
-        nonlocal count
         txt.delete(1,END)
         if count >= 9:
             btn["state"] = "disable"
