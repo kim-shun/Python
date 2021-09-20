@@ -1,67 +1,67 @@
 from tkinter import *
 
 def btn_click0():
-    txt.insert(7,0)
+    txt.insert(len(txt.get()),0)
     click_count()
 
 def btn_click1():
-    txt.insert(7,1)
+    txt.insert(len(txt.get()),1)
     click_count()
 
 def btn_click2():
-    txt.insert(7,2)
+    txt.insert(len(txt.get()),2)
     click_count()
 
 def btn_click3():
-    txt.insert(7,3)
+    txt.insert(len(txt.get()),3)
     click_count()
 
 def btn_click4():
-    txt.insert(7,4)
+    txt.insert(len(txt.get()),4)
     click_count()
 
 def btn_click5():
-    txt.insert(7,5)
+    txt.insert(len(txt.get()),5)
     click_count()
 
 def btn_click6():
-    txt.insert(7,6)
+    txt.insert(len(txt.get()),6)
     click_count()
 
 def btn_click7():
-    txt.insert(7,7)
+    txt.insert(len(txt.get()),7)
     click_count()
 
 def btn_click8():
-    txt.insert(7,8)
+    txt.insert(len(txt.get()),8)
     click_count()
 
 def btn_click9():
-    txt.insert(7,9)
+    txt.insert(len(txt.get()),9)
     click_count()
 
 def btn_click_a():
-    txt.insert(7,'A')
+    txt.insert(len(txt.get()),'A')
     click_count()
 
 def btn_click_b():
-    txt.insert(7,'B')
+    txt.insert(len(txt.get()),'B')
     click_count()
 
 def btn_click_c():
-    txt.insert(5,'C')
+    txt.insert(len(txt.get()),'C')
     click_count()
 
 def btn_click_d():
-    txt.insert(7,'D')
+    txt.insert(len(txt.get()),'D')
     click_count()
 
 def btn_click_e():
-    txt.insert(7,'E')
+    txt.insert(len(txt.get()),'E')
     click_count()
 
 def btn_click_f():
-    txt.insert(7,'F')
+    txt.insert(len(txt.get()),'F')
     click_count()
 
 
