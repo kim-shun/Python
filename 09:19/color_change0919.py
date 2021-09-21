@@ -120,7 +120,7 @@ btn_clicks = [btn_click0,btn_click1,btn_click2,btn_click3,btn_click4,
               btn_click5,btn_click6,btn_click7,btn_click8,btn_click9,
               btn_click_a,btn_click_b,btn_click_c,btn_click_d,
               btn_click_e,btn_click_f]
-    
+
 x = 30
 for i in range(16):
     btn = Button(text=nums[i],command=btn_clicks[i])
