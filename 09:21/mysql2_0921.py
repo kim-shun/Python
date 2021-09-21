@@ -6,7 +6,7 @@ config = {
     'port':'3306',
     'password':'',
     'host':'localhost',
-    'database':'my_python'
+    'database':'y_sampledb'
     }
 dbconnector = mysql.connector.connect(**config) # 接続できるか確認
 if dbconnector.is_connected():
@@ -15,7 +15,7 @@ else:
     print('接続失敗')
     Db_203.py
     exit(1)
-'''
+
 # cursorオブジェクトの生成
 cursor = dbconnector.cursor(buffered=True)
 # id,name,gender,age
@@ -34,7 +34,8 @@ cursor.execute("SELECT * FROM memberlist;")
 tuples = cursor.fetchall()
 print("テーブル memberlist のデータ:")
 for tpl in tuples:
-    print(tpl) # 切断
-'''
+    print(tpl)
+
+# 切断
 dbconnector.close()
-print('END’)
+print("END")
