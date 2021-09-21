@@ -21,11 +21,12 @@ cursor = dbconnector.cursor(buffered=True)
 # id,name,gender,age
 # SQL命令を実行
 cursor.execute("DROP TABLE IF EXISTS memberlist;")
-cursor.execute("CREATE TABLE memberlist ( mid INT, name CHAR(20), gender CHAR(10), age INT, PRIMARY KEY (mid) );")
-cursor.execute("INSERT INTO memberlist VALUES ( 1, 'h_tanaka','W',28);")
-cursor.execute("INSERT INTO memberlist VALUES ( 2, 's_yamada','M',32);")
-cursor.execute("INSERT INTO memberlist VALUES ( 3, 'm_sato','W',21);")
-cursor.execute("INSERT INTO memberlist VALUES ( 4, 'h_abe','M',25);")
+cursor.execute("CREATE TABLE memberlist ( mid INT NOT NULL AUTO_INCREMENT, name CHAR(20), gender CHAR(10), age INT, PRIMARY KEY (mid) );")
+cursor.execute("INSERT INTO memberlist (name, gender, age) VALUES ('h_tanaka','W',28);")
+cursor.execute("INSERT INTO memberlist (name, gender, age) VALUES ('s_yamada','M',32);")
+cursor.execute("INSERT INTO memberlist (name, gender, age) VALUES ('m_sato','W',21);")
+cursor.execute('''INSERT INTO memberlist
+(name, gender, age) VALUES ('h_abe','M',25);''') #これでもイケる
 # コミットする(実際に保存する)
 dbconnector.commit()
 # 問い合わせ
