@@ -7,9 +7,8 @@ def click_count():
     txt.insert(0,count)
     txt.delete(len(str(count)),END)
 
-    n = 2
     def double_count():
-        double = count * n
+        double = count * 2
         txt2.insert(0, double)
         txt2.delete(len(str(double)),END)
     double_count()
