@@ -49,6 +49,8 @@ scope()
 print("scope通過後")
 print("E", loc)
 
+#入れ子構造になると関数内ではglobalが機能しない
+#入れ子構造になると、中でも外でもではなく外だけになる
 '''
 scope通過前
 D XXX
