@@ -5,7 +5,6 @@ def scope():
 
     def do_local():
         loc = "local"
-        print("B",loc)
 
     def do_nonlocal():
         nonlocal loc
@@ -16,11 +15,11 @@ def scope():
         loc = "global"
 
     do_local()
-    print("C",loc)
+    print("B",loc)
     do_nonlocal()
-    print("D", loc)
+    print("C", loc)
     do_global()
-    print("E",loc)
+    print("D",loc)
 
 scope()
-print("F",loc)
+print("E",loc)
