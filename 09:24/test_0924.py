@@ -37,3 +37,40 @@ print(l)
 [11, 12, 13], (21, 22, 23)]
 '''
 
+
+loc = "1"
+def scope():
+    loc = "2"
+
+    def do_local():
+        loc = "3"
+
+    def do_nonlocal():
+        nonlocal loc
+        loc = "4"
+
+    def do_global():
+        global loc
+        loc = "5"
+
+
+
+    do_local()
+    print("【A】", loc)
+    do_nonlocal()
+    print("【B】", loc)
+    do_global()
+    print("【C】", loc)
+
+
+
+print("【D】", loc)
+scope()
+print("【E】", loc)
+
+
+
+
+
+
+
