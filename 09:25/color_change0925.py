@@ -2,8 +2,8 @@ from tkinter import *
 
 
 def btn_click():
-    global n
-    txt.insert(len(txt.get()),n[1])
+    global btn
+    txt.insert(len(txt.get()),1)
 
 
 
@@ -19,10 +19,15 @@ txt = Entry(width=6)
 txt.place(x=110, y=140)
 txt2 = Entry(width=1)
 
-n = [0,1,2,3]
+hexa = "0123456789ABCDEF"
 
-btn = Button(text=str(n[1]),command=btn_click)
-cv.create_window(30, 50, win=btn)
+btns = []
+x = 30
+for i in range(16):
+    btn = Button(text = hexa[i],command= btn_click)
+    cv.create_window(x, 50, win=btn)
+    btns.append(btn)
+    x += 30
 
 
 
